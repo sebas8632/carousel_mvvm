@@ -42,6 +42,22 @@
 		B14E019226B9D05800C8B89C /* RxRelay.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B14E019026B9D05800C8B89C /* RxRelay.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B1A5A00726BA780B0088597E /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A5A00626BA780B0088597E /* LoginViewModel.swift */; };
 		B1A5A01026BB823F0088597E /* LocalStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A5A00F26BB823F0088597E /* LocalStorage.swift */; };
+		B1A5A01826BB8ADC0088597E /* CarouselCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A5A01726BB8ADC0088597E /* CarouselCoordinator.swift */; };
+		B1A5A01A26BB8B3A0088597E /* CarouselViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A5A01926BB8B3A0088597E /* CarouselViewModel.swift */; };
+		B1A5A01C26BB8CFF0088597E /* GetCarouselDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A5A01B26BB8CFF0088597E /* GetCarouselDataService.swift */; };
+		B1A5A02026BB93CF0088597E /* CarouselRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A5A01F26BB93CF0088597E /* CarouselRepositoryProtocol.swift */; };
+		B1A5A02226BB94630088597E /* CarouselDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A5A02126BB94630088597E /* CarouselDataModel.swift */; };
+		B1A5A02626BB953C0088597E /* CarouselItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A5A02526BB953C0088597E /* CarouselItemModel.swift */; };
+		B1A5A02826BB982C0088597E /* CarouselRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A5A02726BB982C0088597E /* CarouselRepository.swift */; };
+		B1A5A02B26BB9A5B0088597E /* GetCarouselDataUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A5A02A26BB9A5B0088597E /* GetCarouselDataUseCase.swift */; };
+		B1A5A02D26BBA8DA0088597E /* Carousel.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1A5A02C26BBA8DA0088597E /* Carousel.storyboard */; };
+		B1A5A02F26BBAA000088597E /* CarouselViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A5A02E26BBAA000088597E /* CarouselViewController.swift */; };
+		B1A5A03326BBAD4C0088597E /* PosterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1A5A03226BBAD4C0088597E /* PosterCell.xib */; };
+		B1A5A03526BBAD6F0088597E /* PosterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A5A03426BBAD6F0088597E /* PosterCell.swift */; };
+		B1A5A03926BBAD8A0088597E /* ThumbCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A5A03726BBAD8A0088597E /* ThumbCell.swift */; };
+		B1A5A03A26BBAD8A0088597E /* ThumbCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1A5A03826BBAD8A0088597E /* ThumbCell.xib */; };
+		B1A5A03D26BBB1260088597E /* ImageView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A5A03C26BBB1260088597E /* ImageView+extension.swift */; };
+		B1A5A04026BBB2660088597E /* CarouselSceneDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A5A03F26BBB2660088597E /* CarouselSceneDIContainer.swift */; };
 		B1D37C7F26BA6BAF00787EC2 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D37C7E26BA6BAF00787EC2 /* LoginCoordinator.swift */; };
 /* End PBXBuildFile section */
 
@@ -96,6 +112,22 @@
 		B14E019026B9D05800C8B89C /* RxRelay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxRelay.framework; path = Carthage/Build/iOS/RxRelay.framework; sourceTree = "<group>"; };
 		B1A5A00626BA780B0088597E /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		B1A5A00F26BB823F0088597E /* LocalStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorage.swift; sourceTree = "<group>"; };
+		B1A5A01726BB8ADC0088597E /* CarouselCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselCoordinator.swift; sourceTree = "<group>"; };
+		B1A5A01926BB8B3A0088597E /* CarouselViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselViewModel.swift; sourceTree = "<group>"; };
+		B1A5A01B26BB8CFF0088597E /* GetCarouselDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCarouselDataService.swift; sourceTree = "<group>"; };
+		B1A5A01F26BB93CF0088597E /* CarouselRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselRepositoryProtocol.swift; sourceTree = "<group>"; };
+		B1A5A02126BB94630088597E /* CarouselDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselDataModel.swift; sourceTree = "<group>"; };
+		B1A5A02526BB953C0088597E /* CarouselItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselItemModel.swift; sourceTree = "<group>"; };
+		B1A5A02726BB982C0088597E /* CarouselRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselRepository.swift; sourceTree = "<group>"; };
+		B1A5A02A26BB9A5B0088597E /* GetCarouselDataUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCarouselDataUseCase.swift; sourceTree = "<group>"; };
+		B1A5A02C26BBA8DA0088597E /* Carousel.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Carousel.storyboard; sourceTree = "<group>"; };
+		B1A5A02E26BBAA000088597E /* CarouselViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselViewController.swift; sourceTree = "<group>"; };
+		B1A5A03226BBAD4C0088597E /* PosterCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PosterCell.xib; sourceTree = "<group>"; };
+		B1A5A03426BBAD6F0088597E /* PosterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterCell.swift; sourceTree = "<group>"; };
+		B1A5A03726BBAD8A0088597E /* ThumbCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbCell.swift; sourceTree = "<group>"; };
+		B1A5A03826BBAD8A0088597E /* ThumbCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ThumbCell.xib; sourceTree = "<group>"; };
+		B1A5A03C26BBB1260088597E /* ImageView+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImageView+extension.swift"; sourceTree = "<group>"; };
+		B1A5A03F26BBB2660088597E /* CarouselSceneDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselSceneDIContainer.swift; sourceTree = "<group>"; };
 		B1D37C7E26BA6BAF00787EC2 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -154,6 +186,7 @@
 		B149EAD526BA63AD00C24059 /* DIContainer */ = {
 			isa = PBXGroup;
 			children = (
+				B1A5A03E26BBB24B0088597E /* Carousel */,
 				B149EADA26BA65CE00C24059 /* Login */,
 				B149EAD826BA648800C24059 /* AppDIContainer.swift */,
 			);
@@ -191,11 +224,9 @@
 				B14E018026B9CD1600C8B89C /* Application */,
 				B14E015D26B9C87000C8B89C /* Assets.xcassets */,
 				B149EAAE26BA2DEA00C24059 /* Constants */,
-				B14E018226B9CD6800C8B89C /* Data */,
-				B14E019326B9D75700C8B89C /* Domain */,
 				B14E016226B9C87000C8B89C /* Info.plist */,
 				B14E015F26B9C87000C8B89C /* LaunchScreen.storyboard */,
-				B14E018726B9CE5500C8B89C /* Presentation */,
+				B1A5A01D26BB8F220088597E /* Modules */,
 			);
 			path = Carousel;
 			sourceTree = "<group>";
@@ -218,6 +249,7 @@
 		B14E018026B9CD1600C8B89C /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				B1A5A03B26BBB1120088597E /* Utils */,
 				B14E018126B9CD1C00C8B89C /* Base */,
 			);
 			path = Application;
@@ -255,6 +287,7 @@
 		B14E018526B9CD7D00C8B89C /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				B1A5A01E26BB93B50088597E /* CarouselRepository */,
 				B149EAB626BA343100C24059 /* LoginRepository */,
 			);
 			path = Repository;
@@ -264,6 +297,7 @@
 			isa = PBXGroup;
 			children = (
 				B149EAA526BA2ABF00C24059 /* PostAuthService.swift */,
+				B1A5A01B26BB8CFF0088597E /* GetCarouselDataService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -271,6 +305,7 @@
 		B14E018726B9CE5500C8B89C /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				B1A5A01326BB8A950088597E /* Carousel */,
 				B1D37C8126BA76D100787EC2 /* Login */,
 			);
 			path = Presentation;
@@ -314,6 +349,7 @@
 		B14E019426B9D76D00C8B89C /* UseCase */ = {
 			isa = PBXGroup;
 			children = (
+				B1A5A02926BB9A3B0088597E /* Carousel */,
 				B149EABF26BA48E200C24059 /* UseCaseProtocol.swift */,
 				B149EABB26BA481300C24059 /* Login */,
 			);
@@ -324,22 +360,16 @@
 			isa = PBXGroup;
 			children = (
 				B149EAB126BA307500C24059 /* LoginRepositoryProtocol.swift */,
-				B14E019626B9D7BE00C8B89C /* Repository */,
+				B1A5A01F26BB93CF0088597E /* CarouselRepositoryProtocol.swift */,
 			);
 			path = Interface;
-			sourceTree = "<group>";
-		};
-		B14E019626B9D7BE00C8B89C /* Repository */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Repository;
 			sourceTree = "<group>";
 		};
 		B14E019826B9D7D900C8B89C /* Entity */ = {
 			isa = PBXGroup;
 			children = (
-				B149EAB426BA323A00C24059 /* TokenDataModel.swift */,
+				B1A5A02426BB95220088597E /* Carousel */,
+				B1A5A02326BB951C0088597E /* Login */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -360,12 +390,134 @@
 			path = Local;
 			sourceTree = "<group>";
 		};
+		B1A5A01326BB8A950088597E /* Carousel */ = {
+			isa = PBXGroup;
+			children = (
+				B1A5A01626BB8AB60088597E /* Coordinator */,
+				B1A5A01526BB8AB10088597E /* View */,
+				B1A5A01426BB8AAB0088597E /* ViewModel */,
+			);
+			path = Carousel;
+			sourceTree = "<group>";
+		};
+		B1A5A01426BB8AAB0088597E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B1A5A01926BB8B3A0088597E /* CarouselViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B1A5A01526BB8AB10088597E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B1A5A03026BBAD130088597E /* Cells */,
+				B1A5A02C26BBA8DA0088597E /* Carousel.storyboard */,
+				B1A5A02E26BBAA000088597E /* CarouselViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B1A5A01626BB8AB60088597E /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				B1A5A01726BB8ADC0088597E /* CarouselCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		B1A5A01D26BB8F220088597E /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				B14E018226B9CD6800C8B89C /* Data */,
+				B14E019326B9D75700C8B89C /* Domain */,
+				B14E018726B9CE5500C8B89C /* Presentation */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		B1A5A01E26BB93B50088597E /* CarouselRepository */ = {
+			isa = PBXGroup;
+			children = (
+				B1A5A02726BB982C0088597E /* CarouselRepository.swift */,
+			);
+			path = CarouselRepository;
+			sourceTree = "<group>";
+		};
+		B1A5A02326BB951C0088597E /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				B149EAB426BA323A00C24059 /* TokenDataModel.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		B1A5A02426BB95220088597E /* Carousel */ = {
+			isa = PBXGroup;
+			children = (
+				B1A5A02126BB94630088597E /* CarouselDataModel.swift */,
+				B1A5A02526BB953C0088597E /* CarouselItemModel.swift */,
+			);
+			path = Carousel;
+			sourceTree = "<group>";
+		};
+		B1A5A02926BB9A3B0088597E /* Carousel */ = {
+			isa = PBXGroup;
+			children = (
+				B1A5A02A26BB9A5B0088597E /* GetCarouselDataUseCase.swift */,
+			);
+			path = Carousel;
+			sourceTree = "<group>";
+		};
+		B1A5A03026BBAD130088597E /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				B1A5A03626BBAD730088597E /* Thumb */,
+				B1A5A03126BBAD1C0088597E /* Poster */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		B1A5A03126BBAD1C0088597E /* Poster */ = {
+			isa = PBXGroup;
+			children = (
+				B1A5A03226BBAD4C0088597E /* PosterCell.xib */,
+				B1A5A03426BBAD6F0088597E /* PosterCell.swift */,
+			);
+			path = Poster;
+			sourceTree = "<group>";
+		};
+		B1A5A03626BBAD730088597E /* Thumb */ = {
+			isa = PBXGroup;
+			children = (
+				B1A5A03726BBAD8A0088597E /* ThumbCell.swift */,
+				B1A5A03826BBAD8A0088597E /* ThumbCell.xib */,
+			);
+			path = Thumb;
+			sourceTree = "<group>";
+		};
+		B1A5A03B26BBB1120088597E /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				B1A5A03C26BBB1260088597E /* ImageView+extension.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		B1A5A03E26BBB24B0088597E /* Carousel */ = {
+			isa = PBXGroup;
+			children = (
+				B1A5A03F26BBB2660088597E /* CarouselSceneDIContainer.swift */,
+			);
+			path = Carousel;
+			sourceTree = "<group>";
+		};
 		B1D37C8126BA76D100787EC2 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				B14E018F26B9CEAD00C8B89C /* ViewModel */,
-				B14E018E26B9CEA700C8B89C /* View */,
 				B14E018D26B9CEA300C8B89C /* Coordinator */,
+				B14E018E26B9CEA700C8B89C /* View */,
+				B14E018F26B9CEAD00C8B89C /* ViewModel */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -428,8 +580,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1A5A02D26BBA8DA0088597E /* Carousel.storyboard in Resources */,
 				B14E016126B9C87000C8B89C /* LaunchScreen.storyboard in Resources */,
 				B14E015E26B9C87000C8B89C /* Assets.xcassets in Resources */,
+				B1A5A03326BBAD4C0088597E /* PosterCell.xib in Resources */,
+				B1A5A03A26BBAD8A0088597E /* ThumbCell.xib in Resources */,
 				B14E015C26B9C87000C8B89C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -442,12 +597,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				B149EAC226BA4A8500C24059 /* ApplicationError.swift in Sources */,
+				B1A5A02626BB953C0088597E /* CarouselItemModel.swift in Sources */,
+				B1A5A03D26BBB1260088597E /* ImageView+extension.swift in Sources */,
+				B1A5A03926BBAD8A0088597E /* ThumbCell.swift in Sources */,
+				B1A5A02F26BBAA000088597E /* CarouselViewController.swift in Sources */,
 				B14E015926B9C87000C8B89C /* ViewController.swift in Sources */,
+				B1A5A02B26BB9A5B0088597E /* GetCarouselDataUseCase.swift in Sources */,
 				B149EAD926BA648800C24059 /* AppDIContainer.swift in Sources */,
 				B149EAC726BA4CF700C24059 /* AppCoordinator.swift in Sources */,
+				B1A5A01A26BB8B3A0088597E /* CarouselViewModel.swift in Sources */,
 				B1A5A00726BA780B0088597E /* LoginViewModel.swift in Sources */,
 				B149EAB826BA345200C24059 /* LoginRepository.swift in Sources */,
 				B14E015526B9C87000C8B89C /* AppDelegate.swift in Sources */,
+				B1A5A03526BBAD6F0088597E /* PosterCell.swift in Sources */,
 				B149EAB026BA2DFE00C24059 /* NetworkConstants.swift in Sources */,
 				B149EAB226BA307500C24059 /* LoginRepositoryProtocol.swift in Sources */,
 				B149EAC526BA4C3000C24059 /* CoordinatorProtocols.swift in Sources */,
@@ -455,9 +617,15 @@
 				B149EABD26BA48C500C24059 /* GetTokenUseCase.swift in Sources */,
 				B1A5A01026BB823F0088597E /* LocalStorage.swift in Sources */,
 				B149EAA626BA2ABF00C24059 /* PostAuthService.swift in Sources */,
+				B1A5A01826BB8ADC0088597E /* CarouselCoordinator.swift in Sources */,
+				B1A5A02826BB982C0088597E /* CarouselRepository.swift in Sources */,
+				B1A5A04026BBB2660088597E /* CarouselSceneDIContainer.swift in Sources */,
+				B1A5A01C26BB8CFF0088597E /* GetCarouselDataService.swift in Sources */,
 				B149EAC026BA48E200C24059 /* UseCaseProtocol.swift in Sources */,
+				B1A5A02026BB93CF0088597E /* CarouselRepositoryProtocol.swift in Sources */,
 				B1D37C7F26BA6BAF00787EC2 /* LoginCoordinator.swift in Sources */,
 				B149EAD726BA641F00C24059 /* LoginSceneDIContainer.swift in Sources */,
+				B1A5A02226BB94630088597E /* CarouselDataModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

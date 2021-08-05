@@ -37,9 +37,14 @@ class ViewController: UIViewController {
     private func setupBindings() {
         
         viewModel?.token
+            .observe(on: MainScheduler.instance)
             .subscribe(onNext: { [weak self] (token) in
-                self?.storage.write(key: (self?.storage.tokenEarmark)!, value: token.token)
-                self?.coordinator?.coordinateToCarousel(token: token.token)
+                print(token.type)
+                print(token.token)
+                
+//                self?.storage.write(key: (self?.storage.tokenEarmark)!, value: token.token)
+//                self?.storage.write(key: (self?.storage.tokenTypeEarmark)!, value: token.type)
+                self?.coordinator?.coordinateToCarousel(token: token)
                 
             })
             .disposed(by: bag)

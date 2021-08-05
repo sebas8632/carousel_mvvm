@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 protocol LoginFlow: class {
-    func coordinateToCarousel(token: String)
+    func coordinateToCarousel(token: TokenDataModel)
 }
 class LoginCoordinator: CoordinatorProtocol {
    
@@ -32,8 +32,13 @@ class LoginCoordinator: CoordinatorProtocol {
 }
 
 extension LoginCoordinator: LoginFlow {
-    func coordinateToCarousel(token: String) {
-        // TODO
+    func coordinateToCarousel(token: TokenDataModel) {
+        guard let navigationController = self.navigationController else { return }
+        
+        let appDIContainer = AppDIContainer()
+        let carouselDIContainer = appDIContainer.makeCarouselSceneDIContainer()
+        let carouselCoordinator = CarouselCoordinator(navigationController: navigationController, carouselDIContainer: carouselDIContainer, tokenDataModel: token)
+        coordinate(to: carouselCoordinator)
     }
     
     

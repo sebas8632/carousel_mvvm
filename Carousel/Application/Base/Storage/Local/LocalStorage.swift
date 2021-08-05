@@ -18,6 +18,8 @@ class LocalStorage: LocalStorageProtocol {
     fileprivate let userDefaults: UserDefaults = UserDefaults.standard
     
     let tokenEarmark: String = "tokenEarmark"
+    let tokenTypeEarmark: String = "tokenTypeEarmark"
+    let tokenRefreshEarmark: String = "tokenRefreshEarmark"
     
     func value<T>(key: String) -> T? {
         return self.userDefaults.object(forKey: key) as? T

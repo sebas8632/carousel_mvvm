@@ -19,4 +19,8 @@ final class AppDIContainer {
     func makeLoginSceneDIContainer() -> LoginSceneDIContainer {
         return LoginSceneDIContainer(sessionProvider: sessionProvider)
     }
+    
+    func makeCarouselSceneDIContainer() -> CarouselSceneDIContainer {
+        return CarouselSceneDIContainer(sessionProvider: sessionProvider)
+    }
 }
