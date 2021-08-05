@@ -6,7 +6,16 @@
 //
 
 import UIKit
-
+import  Kingfisher
 class PosterCell: UICollectionViewCell {
     
+    @IBOutlet weak var imageViewPoster: UIImageView!
+    @IBOutlet weak var imageTitleLabel: UILabel!
+
+    var item: CarouselItemModel? {
+        didSet {
+            imageTitleLabel.text = item?.title
+            imageViewPoster.setImageFrom(url: item?.imageUrl ?? "")
+        }
+    }
 }

@@ -14,23 +14,28 @@ protocol CarouselViewModelProtocol {
     var getCarouselDataUseCase: GetCarouselDataUseCaseProtocol? { get set }
     var tokenDataModel: TokenDataModel? { get set }
     
+    var thumbs: PublishSubject<[CarouselDataModel]>? { get set }
+    var posters: PublishSubject<[CarouselDataModel]>? { get set }
+
     init(tokenDataModel: TokenDataModel, getTokenUseCase: GetTokenUseCaseProtocol, getCarouselDataUseCase: GetCarouselDataUseCaseProtocol)
     
     func getCarouselData()
 }
 class CarouselViewModel: CarouselViewModelProtocol {
+    
 
     var getTokenUseCase: GetTokenUseCaseProtocol?
     var getCarouselDataUseCase: GetCarouselDataUseCaseProtocol?
     var tokenDataModel: TokenDataModel?
     
-    public var posters: PublishSubject<[CarouselDataModel]> = PublishSubject()
-    public var thumbs: PublishSubject<[CarouselDataModel]> = PublishSubject()
-
+    var thumbs: PublishSubject<[CarouselDataModel]>?
+    var posters: PublishSubject<[CarouselDataModel]>?
 
     required init(tokenDataModel: TokenDataModel, getTokenUseCase: GetTokenUseCaseProtocol, getCarouselDataUseCase: GetCarouselDataUseCaseProtocol) {
         self.getTokenUseCase = getTokenUseCase
         self.getCarouselDataUseCase = getCarouselDataUseCase
+        thumbs = PublishSubject()
+        posters = PublishSubject()
     }
     
     func getCarouselData() {
@@ -43,8 +48,8 @@ class CarouselViewModel: CarouselViewModelProtocol {
                 let filteredThumbs = dataArray.filter { (dataModel) -> Bool in
                     dataModel.type == "thumb"
                 }
-                self?.posters.onNext(filteredPosters)
-                self?.thumbs.onNext(filteredThumbs)
+                self?.posters?.onNext(filteredPosters)
+                self?.thumbs?.onNext(filteredThumbs)
             case .failure(let error):
                 print(error.localizedDescription)
             }

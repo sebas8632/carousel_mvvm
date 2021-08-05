@@ -8,28 +8,28 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ThumbCell" customModule="Carousel" customModuleProvider="target">
-            <connections>
-                <outlet property="imageTitle" destination="8BP-15-8iJ" id="b2k-Pr-BYl"/>
-                <outlet property="imageView" destination="eN1-N7-h1F" id="pTP-eB-rF8"/>
-            </connections>
-        </placeholder>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ThumbCell" customModule="Carousel" customModuleProvider="target"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="yqo-MP-sPc">
-            <rect key="frame" x="0.0" y="0.0" width="340" height="308"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="thumbCellRU" id="yqo-MP-sPc" customClass="ThumbCell" customModule="Carousel" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="146" height="155"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="vKI-Cc-m7D">
-                <rect key="frame" x="0.0" y="0.0" width="340" height="308"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" id="vKI-Cc-m7D">
+                <rect key="frame" x="0.0" y="0.0" width="146" height="155"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NTf-Kw-Sm8">
-                        <rect key="frame" x="0.0" y="0.0" width="340" height="308"/>
+                        <rect key="frame" x="0.0" y="0.0" width="200" height="150"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eN1-N7-h1F">
-                                <rect key="frame" x="0.0" y="0.0" width="340" height="246.5"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="opticaldiscdrive.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="eN1-N7-h1F">
+                                <rect key="frame" x="0.0" y="2" width="200" height="116"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="skeletonCornerRadius">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8BP-15-8iJ">
-                                <rect key="frame" x="16" y="246.5" width="308" height="61.5"/>
+                                <rect key="frame" x="16" y="120" width="168" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -44,7 +44,9 @@
                             <constraint firstItem="8BP-15-8iJ" firstAttribute="height" secondItem="NTf-Kw-Sm8" secondAttribute="height" multiplier="0.2" id="XKT-lw-4x0"/>
                             <constraint firstItem="eN1-N7-h1F" firstAttribute="top" secondItem="NTf-Kw-Sm8" secondAttribute="top" id="XSt-0C-PTP"/>
                             <constraint firstItem="8BP-15-8iJ" firstAttribute="top" secondItem="eN1-N7-h1F" secondAttribute="bottom" id="YfE-Eg-YU5"/>
+                            <constraint firstAttribute="width" constant="200" id="ZdB-51-TbL"/>
                             <constraint firstItem="eN1-N7-h1F" firstAttribute="height" secondItem="NTf-Kw-Sm8" secondAttribute="height" multiplier="0.8" id="ghU-DG-FSc"/>
+                            <constraint firstAttribute="height" constant="150" id="oMF-tQ-sBF"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -55,11 +57,16 @@
                     <constraint firstAttribute="trailing" secondItem="NTf-Kw-Sm8" secondAttribute="trailing" id="xVh-HL-tjf"/>
                 </constraints>
             </collectionViewCellContentView>
-            <size key="customSize" width="340" height="308"/>
-            <point key="canvasLocation" x="339.13043478260875" y="170.08928571428569"/>
+            <size key="customSize" width="146" height="155"/>
+            <connections>
+                <outlet property="imageTitleLabel" destination="8BP-15-8iJ" id="jaZ-nJ-Twy"/>
+                <outlet property="imageViewThumb" destination="eN1-N7-h1F" id="vGl-Uc-HmZ"/>
+            </connections>
+            <point key="canvasLocation" x="198.55072463768118" y="118.19196428571428"/>
         </collectionViewCell>
     </objects>
     <resources>
+        <image name="opticaldiscdrive.fill" catalog="system" width="128" height="87"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

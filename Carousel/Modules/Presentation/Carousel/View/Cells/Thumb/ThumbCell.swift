@@ -9,16 +9,13 @@ import UIKit
 import Kingfisher
 class ThumbCell: UICollectionViewCell {
 
-    @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var imageTitle: UILabel!
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
+    @IBOutlet weak var imageViewThumb: UIImageView!
+    @IBOutlet weak var imageTitleLabel: UILabel!
+
     var item: CarouselItemModel? {
         didSet {
-            imageTitle.text = item?.title
-            imageView.setImageFrom(url: item?.imageUrl ?? "")
+            imageTitleLabel.text = item?.title
+            imageViewThumb.setImageFrom(url: item?.imageUrl ?? "")
         }
     }
 }
