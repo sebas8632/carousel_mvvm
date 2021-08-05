@@ -12,6 +12,7 @@ class AppCoordinator: CoordinatorProtocol {
     
     let window: UIWindow
     private let appDIContainer: AppDIContainer
+    let storage: LocalStorage = LocalStorage()
     
     init(window: UIWindow, appDIContainer: AppDIContainer) {
         self.window = window
@@ -23,10 +24,16 @@ class AppCoordinator: CoordinatorProtocol {
         window.rootViewController = navigationController
         window.makeKeyAndVisible()
         
-        let loginSceneDIContainer = appDIContainer.makeLoginSceneDIContainer()
-        let loginCoordinator = loginSceneDIContainer.makeLoginCoordinator(navigationController: navigationController)
-        loginCoordinator.loginDICOntainer = loginSceneDIContainer
-        coordinate(to: loginCoordinator)
+        if storage.exist(key: storage.tokenEarmark) {
+            // TODO: Continue carousel
+        } else {
+            let loginSceneDIContainer = appDIContainer.makeLoginSceneDIContainer()
+            let loginCoordinator = loginSceneDIContainer.makeLoginCoordinator(navigationController: navigationController)
+            loginCoordinator.loginDICOntainer = loginSceneDIContainer
+            coordinate(to: loginCoordinator)
+        }
+        
+
     }
     
 }
