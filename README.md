@@ -38,4 +38,4 @@ This project require  `Xcode 12.0`, `Swift 5` and should be run on `iOS 14.0`.
 ## Evidence
 On this Section we are going to watch the app running.
 
-
+![alt text](https://github.com/sebas8632/carousel_mvvm/blob/main/definitivo.gif)
