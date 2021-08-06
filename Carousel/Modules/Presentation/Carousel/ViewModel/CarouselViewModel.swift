@@ -7,16 +7,13 @@
 
 import Foundation
 import RxSwift
-import RxCocoa
 
 protocol CarouselViewModelProtocol {
     var getTokenUseCase: GetTokenUseCaseProtocol? { get set }
     var getCarouselDataUseCase: GetCarouselDataUseCaseProtocol? { get set }
     var tokenDataModel: TokenDataModel? { get set }
     
-    var thumbs: PublishSubject<[CarouselDataModel]>? { get set }
-    var posters: PublishSubject<[CarouselDataModel]>? { get set }
-
+    var dataModel: PublishSubject<[CarouselDataModel]>? { get set }
     init(tokenDataModel: TokenDataModel, getTokenUseCase: GetTokenUseCaseProtocol, getCarouselDataUseCase: GetCarouselDataUseCaseProtocol)
     
     func getCarouselData()
@@ -28,28 +25,19 @@ class CarouselViewModel: CarouselViewModelProtocol {
     var getCarouselDataUseCase: GetCarouselDataUseCaseProtocol?
     var tokenDataModel: TokenDataModel?
     
-    var thumbs: PublishSubject<[CarouselDataModel]>?
-    var posters: PublishSubject<[CarouselDataModel]>?
+    var dataModel: PublishSubject<[CarouselDataModel]>?
 
     required init(tokenDataModel: TokenDataModel, getTokenUseCase: GetTokenUseCaseProtocol, getCarouselDataUseCase: GetCarouselDataUseCaseProtocol) {
         self.getTokenUseCase = getTokenUseCase
         self.getCarouselDataUseCase = getCarouselDataUseCase
-        thumbs = PublishSubject()
-        posters = PublishSubject()
+        dataModel = PublishSubject()
     }
     
     func getCarouselData() {
         didGetCarouselData {[weak self] (result) in
             switch result {
             case .success(let dataArray):
-                let filteredPosters = dataArray.filter { (dataModel) -> Bool in
-                    dataModel.type == "poster"
-                }
-                let filteredThumbs = dataArray.filter { (dataModel) -> Bool in
-                    dataModel.type == "thumb"
-                }
-                self?.posters?.onNext(filteredPosters)
-                self?.thumbs?.onNext(filteredThumbs)
+                self?.dataModel?.onNext(dataArray)
             case .failure(let error):
                 print(error.localizedDescription)
             }

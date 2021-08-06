@@ -7,21 +7,21 @@
 
 import UIKit
 import RxSwift
-import RxCocoa
 
 class CarouselViewController: UIViewController {
-    @IBOutlet weak var postersTitle: UILabel!
-    @IBOutlet weak var thumbsTitle: UILabel!
-    @IBOutlet weak var postersCollectionView: UICollectionView!
-    @IBOutlet weak var thumbsCollectionView: UICollectionView!
+    @IBOutlet weak var carouselTableView: UITableView!
     
     var viewModel: CarouselViewModelProtocol?
     var tokenDataModel: TokenDataModel?
+    
+    var dataModel: [CarouselDataModel]?
     
     let bag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        carouselTableView.dataSource = self
+        carouselTableView.delegate = self
         setupUI()
         setupBindings()
         viewModel?.getCarouselData()
@@ -37,43 +37,35 @@ class CarouselViewController: UIViewController {
         navigationController?.setNavigationBarHidden(false, animated: animated)
     }
     
-    
     private func setupBindings() {
-        
-        // MARK: Posters Section
-        viewModel?.posters?
-            .map({$0.first?.title})
-            .bind(to: postersTitle.rx.text)
+        viewModel?.dataModel?
+            .observe(on: MainScheduler.instance)
+            .subscribe(onNext: { [weak self] data in
+                self?.dataModel = data
+                self?.carouselTableView.reloadData()
+            })
             .disposed(by: bag)
-        
-        viewModel?.posters?
-            .asObservable()
-            .map{ $0.first!.items}
-            .bind(to: postersCollectionView.rx
-                    .items(cellIdentifier: "posterCellRU", cellType: PosterCell.self)) { (row, poster, cell) in
-                cell.item = poster
-            }.disposed(by: bag)
-        
-        // MARK: - Thumbs Section
-        
-        viewModel?.thumbs?
-            .map({$0.first?.title})
-            .bind(to: thumbsTitle.rx.text)
-            .disposed(by: bag)
-        
-        viewModel?.thumbs?
-            .asObservable()
-            .map{ $0.first!.items}
-            .bind(to: thumbsCollectionView.rx
-                    .items(cellIdentifier: "thumbCellRU", cellType: ThumbCell.self)) { (row, thumb, cell) in
-                cell.item = thumb
-            }.disposed(by: bag)
     }
     
     private func setupUI() {
-        thumbsCollectionView.register(UINib(nibName: "ThumbCell", bundle: nil), forCellWithReuseIdentifier: "thumbCellRU")
-        postersCollectionView.register(UINib(nibName: "PosterCell", bundle: nil), forCellWithReuseIdentifier: "posterCellRU")
+        carouselTableView.register(UINib(nibName: "CarouselTableViewCell", bundle: nil), forCellReuseIdentifier: "carouselTVCell")
     }
     
-    
 }
+
+extension CarouselViewController: UITableViewDataSource, UITableViewDelegate {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        dataModel?.count ?? 0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "carouselTVCell") as! CarouselTableViewCell
+        cell.dataModel = dataModel?[indexPath.row]
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 250
+    }
+}
+

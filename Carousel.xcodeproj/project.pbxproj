@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B108227326BCF6DF00883F32 /* CarouselTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B108227126BCF6DF00883F32 /* CarouselTableViewCell.swift */; };
+		B108227426BCF6DF00883F32 /* CarouselTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B108227226BCF6DF00883F32 /* CarouselTableViewCell.xib */; };
 		B149EAA626BA2ABF00C24059 /* PostAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B149EAA526BA2ABF00C24059 /* PostAuthService.swift */; };
 		B149EAB026BA2DFE00C24059 /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B149EAAF26BA2DFE00C24059 /* NetworkConstants.swift */; };
 		B149EAB226BA307500C24059 /* LoginRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B149EAB126BA307500C24059 /* LoginRepositoryProtocol.swift */; };
@@ -83,6 +85,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B108227126BCF6DF00883F32 /* CarouselTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselTableViewCell.swift; sourceTree = "<group>"; };
+		B108227226BCF6DF00883F32 /* CarouselTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarouselTableViewCell.xib; sourceTree = "<group>"; };
 		B149EAA526BA2ABF00C24059 /* PostAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostAuthService.swift; sourceTree = "<group>"; };
 		B149EAAF26BA2DFE00C24059 /* NetworkConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
 		B149EAB126BA307500C24059 /* LoginRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRepositoryProtocol.swift; sourceTree = "<group>"; };
@@ -150,6 +154,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B108227026BCF6C500883F32 /* Table */ = {
+			isa = PBXGroup;
+			children = (
+				B108227126BCF6DF00883F32 /* CarouselTableViewCell.swift */,
+				B108227226BCF6DF00883F32 /* CarouselTableViewCell.xib */,
+			);
+			path = Table;
+			sourceTree = "<group>";
+		};
 		B149EAAE26BA2DEA00C24059 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
@@ -472,6 +485,7 @@
 		B1A5A03026BBAD130088597E /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				B108227026BCF6C500883F32 /* Table */,
 				B1A5A03626BBAD730088597E /* Thumb */,
 				B1A5A03126BBAD1C0088597E /* Poster */,
 			);
@@ -583,6 +597,7 @@
 				B1A5A02D26BBA8DA0088597E /* Carousel.storyboard in Resources */,
 				B14E016126B9C87000C8B89C /* LaunchScreen.storyboard in Resources */,
 				B14E015E26B9C87000C8B89C /* Assets.xcassets in Resources */,
+				B108227426BCF6DF00883F32 /* CarouselTableViewCell.xib in Resources */,
 				B1A5A03326BBAD4C0088597E /* PosterCell.xib in Resources */,
 				B1A5A03A26BBAD8A0088597E /* ThumbCell.xib in Resources */,
 				B14E015C26B9C87000C8B89C /* Main.storyboard in Resources */,
@@ -623,6 +638,7 @@
 				B1A5A01C26BB8CFF0088597E /* GetCarouselDataService.swift in Sources */,
 				B149EAC026BA48E200C24059 /* UseCaseProtocol.swift in Sources */,
 				B1A5A02026BB93CF0088597E /* CarouselRepositoryProtocol.swift in Sources */,
+				B108227326BCF6DF00883F32 /* CarouselTableViewCell.swift in Sources */,
 				B1D37C7F26BA6BAF00787EC2 /* LoginCoordinator.swift in Sources */,
 				B149EAD726BA641F00C24059 /* LoginSceneDIContainer.swift in Sources */,
 				B1A5A02226BB94630088597E /* CarouselDataModel.swift in Sources */,
